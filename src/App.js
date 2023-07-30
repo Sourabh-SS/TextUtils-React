@@ -11,11 +11,13 @@ function App() {
       document.body.style.backgroundColor="#1a376d";
       setMode("dark");
       showAlert("DarkMode Enabled!!","success");
+      document.title="TextUtils - DarkMode"
     }
     else{
       document.body.style.backgroundColor="white";
       setMode("light");
       showAlert("LightMode Enabled!!","success");
+      document.title="TextUtils - LightMode"
     }
   };
   const [alert,setAlert]=useState(null);
@@ -29,6 +31,8 @@ function App() {
       setAlert(null);
     },1000);
   };
+
+
 
   return (
     <>
