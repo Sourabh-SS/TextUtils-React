@@ -20,6 +20,18 @@ function App() {
       document.title="TextUtils - LightMode"
     }
   };
+  const bgChange=(bgState)=>{
+      if(mode==="dark" && bgState==="green"){
+        document.body.style.backgroundColor="green";}
+        
+      else if(mode=="dark" && bgState==="red"){
+        console.log("Hi");
+        document.body.style.backgroundColor="red";}
+      
+      else{
+        document.body.style.backgroundColor="white";
+      }
+  };
   const [alert,setAlert]=useState(null);
   const showAlert=(message,type)=>{
     setAlert({
@@ -37,7 +49,7 @@ function App() {
   return (
     <>
 
-    <Navbar text="TextUtilis" stateMode={mode} enableDM={enableDarkMode}/>
+    <Navbar text="TextUtilis" stateMode={mode} enableDM={enableDarkMode} bgo={bgChange}/>
     <Alert alert={alert}/>
     <div className="container"><TextForm heading="Text Converter" stateMode={mode} showIt={showAlert}/></div>
 

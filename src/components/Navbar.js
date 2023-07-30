@@ -19,9 +19,15 @@ export default function Navbar(props) {
         <li className="nav-item">
           <a className="nav-link" href="/">{props.link}</a>
         </li>
+        </ul>
+    
+    
+    <button type="button" onClick={()=>props.bgo("green")} className="btn btn-success rounded-circle btn-sm mx-2">Green</button>
+    <button type="button" onClick={()=>props.bgo("red")} className="btn btn-danger rounded-circle btn-sm mx-2 me-3">Red</button>
+    
+    
         
-        
-      </ul>
+      
       <div className={`form-check form-switch text-${(props.stateMode==='light')?'dark':'light'}`}>
   <input className="form-check-input" onChange={props.enableDM} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable DarkMode</label>
