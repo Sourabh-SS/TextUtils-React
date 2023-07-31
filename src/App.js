@@ -24,8 +24,7 @@ function App() {
       if(mode==="dark" && bgState==="green"){
         document.body.style.backgroundColor="green";}
         
-      else if(mode=="dark" && bgState==="red"){
-        console.log("Hi");
+      else if(mode==="dark" && bgState==="red"){
         document.body.style.backgroundColor="red";}
       
       else{
