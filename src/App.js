@@ -2,7 +2,15 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert'
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import About from './components/About'
+import {
+
+  Route,
+  Routes,
+  BrowserRouter,
+  
+} from "react-router-dom";
 
 function App() {
   const [mode,setMode]=useState("light");
@@ -48,10 +56,19 @@ function App() {
   return (
     <>
 
+    <BrowserRouter>
     <Navbar text="TextUtilis" stateMode={mode} enableDM={enableDarkMode} bgo={bgChange}/>
     <Alert alert={alert}/>
-    <div className="container"><TextForm heading="Text Converter" stateMode={mode} showIt={showAlert}/></div>
+    <div className="container">
+    <Routes>
+    <Route exact path="/about" element={<About/>}>
+    </Route>
+    <Route exact path="/" element={<TextForm heading="Text Converter" stateMode={mode} showIt={showAlert}/>}>
+    </Route>
+    </Routes>
+    </div>
 
+    </BrowserRouter>
     
     
     
