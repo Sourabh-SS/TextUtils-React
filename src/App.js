@@ -3,14 +3,14 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert'
 import './App.css';
 import React, { useState } from 'react';
-import About from './components/About'
-import {
+// import About from './components/About'
+// import {
 
-  Route,
-  Routes,
-  BrowserRouter,
+//   Route,
+//   Routes,
+//   BrowserRouter,
   
-} from "react-router-dom";
+// } from "react-router-dom";
 
 function App() {
   const [mode,setMode]=useState("light");
@@ -56,19 +56,19 @@ function App() {
   return (
     <>
 
-    <BrowserRouter>
+    {/* <BrowserRouter> */}
     <Navbar text="TextUtilis" stateMode={mode} enableDM={enableDarkMode} bgo={bgChange}/>
     <Alert alert={alert}/>
     <div className="container">
-    <Routes>
+    {/* <Routes>
     <Route exact path="/about" element={<About/>}>
-    </Route>
-    <Route exact path="/" element={<TextForm heading="Text Converter" stateMode={mode} showIt={showAlert}/>}>
-    </Route>
-    </Routes>
+    </Route> */}
+    <TextForm heading="Text Converter" stateMode={mode} showIt={showAlert}/>
+    {/* </Route>
+    </Routes> */}
     </div>
-
-    </BrowserRouter>
+{/* 
+    </BrowserRouter> */}
     
     
     
